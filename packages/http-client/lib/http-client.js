@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const Cache = require('./cache');
+const HttpCache = require('http-cache');
 
 class HttpClient {
   /**
@@ -18,7 +18,7 @@ class HttpClient {
     };
 
     if (this.options.cache && this.options.cache.enabled === true) {
-      this.cache = new Cache(this.options.cache);
+      this.cache = new HttpCache(this.options.cache);
     }
   }
 
