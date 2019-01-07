@@ -1,3 +1,3 @@
 # t0d0-lib
 
-Lerna monorepo shared modules in `t0d0`
+Lerna monorepo of shared modules used by `t0d0`
