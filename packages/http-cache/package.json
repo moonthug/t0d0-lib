@@ -1,0 +1,33 @@
+{
+  "name": "@moonthug/http-cache",
+  "version": "1.0.2",
+  "description": "> TODO: description",
+  "author": "Alex Coulcher <alex@polyglot.rodeo>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moonthug/t0d0-lib.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/moonthug/t0d0-lib/issues"
+  },
+  "dependencies": {
+    "ioredis": "^4.3.0",
+    "object-hash": "^1.3.1"
+  }
+}
