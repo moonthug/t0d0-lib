@@ -13,8 +13,18 @@
   "files": [
     "lib"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moonthug/t0d0-lib.git"
+  },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/moonthug/t0d0-lib/issues"
   },
   "dependencies": {
     "@moonthug/http-cache": "^1.0.1",
