@@ -1,5 +1,5 @@
 {
-  "name": "http-client",
+  "name": "@moonthug/http-client",
   "version": "1.0.1",
   "description": "HTTP Client",
   "author": "Alex Coulcher <alex@polyglot.rodeo>",
@@ -17,7 +17,8 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "axios": "^0.18.0",
-    "http-cache": "^0.3.1"
-  }
+    "@moonthug/http-cache": "^1.0.1",
+    "axios": "^0.18.0"
+  },
+  "gitHead": "f166803cecaec4c72d1bd6ffb49371d66767da9c"
 }
