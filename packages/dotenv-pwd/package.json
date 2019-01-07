@@ -1,0 +1,22 @@
+{
+  "name": "dotenv-pwd",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "Alex Coulcher <alex@polyglot.rodeo>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^6.2.0"
+  }
+}

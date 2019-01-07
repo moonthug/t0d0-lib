@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "semistandard",
+    "plugin:react/recommended",
+    "prettier",
+    "prettier/react",
+  ],
+  "env": {
+    "browser": false,
+    "es6": true,
+    "node": true,
+    "mocha": true
+  },
+  "globals": {
+    "__DEV__": false
+  },
+  "plugins": [
+    "react",
+    "prettier"
+  ],  "rules": {
+    "spaced-comment": "off",
+    "prettier/prettier": [
+      "error", {
+        "singleQuote": true
+      }
+    ]
+  }
+}
