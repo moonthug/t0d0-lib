@@ -1,6 +1,6 @@
 {
   "name": "@moonthug/trello",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "> TODO: description",
   "author": "Alex Coulcher <alex@polyglot.rodeo>",
   "homepage": "https://github.com/moonthug/t0d0-lib#readme",
@@ -27,6 +27,6 @@
     "url": "https://github.com/moonthug/t0d0-lib/issues"
   },
   "dependencies": {
-    "@moonthug/http-client": "^1.0.11"
+    "@moonthug/http-client": "^1.0.12"
   }
 }
