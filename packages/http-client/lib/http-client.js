@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const HttpCache = require('http-cache');
+const HttpCache = require('@moonthug/http-cache');
 
 class HttpClient {
   /**
