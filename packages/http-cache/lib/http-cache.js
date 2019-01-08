@@ -29,7 +29,7 @@ class HTTPCache {
     let result;
 
     try {
-      result = await this._redis.get(this._getDbKey(objHash));
+      result = await this._redis.getBuffer(this._getDbKey(objHash));
     } catch (e) {
       return null;
     }
