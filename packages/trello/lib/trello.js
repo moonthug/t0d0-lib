@@ -1,6 +1,6 @@
 const HttpClient = require('@moonthug/http-client');
 
-export default class Trello {
+class Trello {
   /**
    *
    * @param {String} apiKey
@@ -118,3 +118,5 @@ export default class Trello {
     return this.httpClient.request(method, url, options);
   }
 }
+
+module.exports = Trello;
