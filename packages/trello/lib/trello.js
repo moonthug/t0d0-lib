@@ -6,12 +6,13 @@ class Trello {
    * @param {String} apiKey
    * @param {String} token
    * @param {String} [baseURL='https://api.trello.com'] baseURL
+   * @param {Object} [httpOptions=null] httpOptions
    */
-  constructor(apiKey, token, baseURL = 'https://api.trello.com') {
-    this.httpClient = new HttpClient();
-    this.baseURL = baseURL;
+  constructor(apiKey, token, { baseURL = 'https://api.trello.com', httpOptions = null }) {
+    this.httpClient = new HttpClient(httpOptions);
     this.apiKey = apiKey;
     this.token = token;
+    this.baseURL = baseURL;
   }
 
   /**
