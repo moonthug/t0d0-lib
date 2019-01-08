@@ -9,7 +9,7 @@ class HttpClient {
    * @param options
    */
   constructor(options) {
-    this.options = lodash.defaults(options, {
+    this.options = lodash.defaultsDeep(options, {
       cache: {
         enabled: true,
         ns: 'httpcache',
