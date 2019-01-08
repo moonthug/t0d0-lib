@@ -1,5 +1,6 @@
 const hash = require('object-hash');
 const Redis = require('ioredis');
+const msgpack = require('msgpack');
 
 class HTTPCache {
   /**
@@ -34,7 +35,7 @@ class HTTPCache {
     }
 
     try {
-      result = JSON.parse(result);
+      result = msgpack.unpack(result);
     } catch (e) {
       return null;
     }
@@ -56,7 +57,7 @@ class HTTPCache {
 
     let objectStringValue;
     try {
-      objectStringValue = JSON.stringify(objectValue);
+      objectStringValue = msgpack.pack(objectValue);
     } catch (e) {
       return null;
     }
