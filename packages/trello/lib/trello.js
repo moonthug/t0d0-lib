@@ -90,6 +90,30 @@ class Trello {
   }
 
   /**
+   * @inheritDoc https://developers.trello.com/v1.0/reference#custom-fields
+   *
+   * @async
+   * @param {String} id
+   * @param {Object} [params={}] params
+   * @returns {Promise<void>}
+   */
+  async getCustomField(id, params = {}) {
+    return this.get(`/1/customFields/${id}`, { params });
+  }
+
+  /**
+   * @inheritDoc https://developers.trello.com/v1.0/reference#custom-fields
+   *
+   * @async
+   * @param {String} id
+   * @param {Object} [params={}] params
+   * @returns {Promise<void>}
+   */
+  async getCustomFieldOptions(id, params = {}) {
+    return this.get(`/1/customFields/${id}/options`, { params });
+  }
+
+  /**
    *
    * @param {String} path
    * @param {Object} options
