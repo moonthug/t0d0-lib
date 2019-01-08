@@ -1,3 +1,4 @@
+const lodash = require('lodash');
 const axios = require('axios');
 
 const HttpCache = require('@moonthug/http-cache');
@@ -8,14 +9,13 @@ class HttpClient {
    * @param options
    */
   constructor(options) {
-    this.options = {
+    this.options = lodash.defaults(options, {
       cache: {
         enabled: true,
         ns: 'httpcache',
         ttl: 60 * 15,
-      },
-      ...options
-    };
+      }
+    });
 
     if (this.options.cache && this.options.cache.enabled === true) {
       this.cache = new HttpCache(this.options.cache);
