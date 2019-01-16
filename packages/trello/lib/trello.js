@@ -37,7 +37,7 @@ class Trello {
    * @returns {Promise<void>}
    */
   async getBoardField(id, field, params = {}) {
-    return this.request('get', `/1/boards/${id}/${field}`, { params });
+    return this.get(`/1/boards/${id}/${field}`, { params });
   }
 
   /**
@@ -49,7 +49,7 @@ class Trello {
    * @returns {Promise<void>}
    */
   async getCard(id, params = {}) {
-    return this.request('get', `/1/cards/${id}`, { params });
+    return this.get(`/1/cards/${id}`, { params });
   }
 
   /**
@@ -63,6 +63,18 @@ class Trello {
    */
   async getCardField(id, field, params = {}) {
     return this.get(`/1/cards/${id}/${field}`, { params });
+  }
+
+  /**
+   * @inheritDoc https://developers.trello.com/reference/#cards-2
+   *
+   * @async
+   * @param {Object} [data={}] data
+   * @param {Object} [params={}] params
+   * @returns {Promise<void>}
+   */
+  async postCard(data = {}, params = {}) {
+    return this.post(`/1/cards`, { data, params });
   }
 
   /**
@@ -122,6 +134,16 @@ class Trello {
    */
   async get(path, options) {
     return this.request('get', path, options);
+  }
+
+  /**
+   *
+   * @param {String} path
+   * @param {Object} options
+   * @returns {Promise<void>}
+   */
+  async post(path, options) {
+    return this.request('post', path, options);
   }
 
   /**
