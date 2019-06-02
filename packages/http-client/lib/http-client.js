@@ -1,5 +1,6 @@
 const lodash = require('lodash');
 const axios = require('axios');
+const debug = require('debug')('http-client');
 
 const HttpCache = require('@moonthug/http-cache');
 
@@ -60,15 +61,13 @@ class HttpClient {
       try {
         const cache = await this.cache.get(request);
         if (cache) {
-          //console.warn('Cached', request.url);
+          debug('Cached: ', request.url);
           return cache;
         }
-        // cache miss
-        //console.warn('Cache miss', request.url);
       } catch (e) {
         // cache fail
-        console.error('Cache fail!', request.url);
-        console.dir(e);
+        debug('Cache fail!', request.url);
+        debug(e);
       }
     }
     return null;
