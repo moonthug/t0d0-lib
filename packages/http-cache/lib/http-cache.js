@@ -10,7 +10,7 @@ class HTTPCache {
   constructor(options) {
     this._redis = new Redis({
       port: options.port || 6379,
-      host: options.port || '127.0.0.1',
+      host: options.host || '127.0.0.1',
       db: options.db || 0
     });
 
